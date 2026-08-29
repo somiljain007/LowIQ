@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Color resources for LXX_System theme. -->
+
+    <color name="background_lxx_system">#101217</color>
+    <color name="background_secondary_lxx_system">#171A20</color>
+
+    <color name="key_text_color_lxx_system">#F4F7FA</color>
+    <color name="key_functional_text_color_lxx_system">#C7D0D9</color>
+    <color name="key_text_inactive_color_lxx_system">#78838E</color>
+    <color name="key_hint_letter_color_lxx_system">#87919C</color>
+
+    <color name="key_background_normal_lxx_system">#242930</color>
+    <color name="key_background_pressed_lxx_system">#34485E</color>
+
+</resources>

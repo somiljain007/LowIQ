@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'org.jetbrains.kotlin.plugin.compose'
+
+android {
+    defaultConfig {
+        applicationId "rkr.simplekeyboard.inputmethod"
+        compileSdk 37
+        minSdkVersion 24
+        targetSdkVersion 37
+        versionCode 147
+        versionName "6.6"
+
+    }
+    buildFeatures {
+        compose true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'rkr.simplekeyboard.inputmethod'
+}
+
+dependencies {
+    implementation("com.google.mlkit:text-recognition:16.0.1")
+    // ========================================================
+// NEXUS OCR - JETPACK COMPOSE
+// ========================================================
+
+    implementation(platform("androidx.compose:compose-bom:2025.10.00"))
+
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+
+    implementation("androidx.compose.foundation:foundation")
+
+    implementation("androidx.compose.material3:material3")
+
+    implementation("androidx.activity:activity-compose:1.10.1")
+
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation("dev.ffmpegkit-maintained:whisper-android:1.0.0")
+}

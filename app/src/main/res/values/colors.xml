@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Launcher -->
+    <color name="ic_launcher_background">#080A0F</color>
+
+
+    <!-- ================================================= -->
+    <!-- LXX SYSTEM THEME                                  -->
+    <!-- ================================================= -->
+
+    <color name="background_lxx_system">#0B0D12</color>
+    <color name="background_secondary_lxx_system">#11151C</color>
+
+    <color name="key_text_color_lxx_system">#F5F7FA</color>
+    <color name="key_functional_text_color_lxx_system">#C4CCD6</color>
+    <color name="key_text_inactive_color_lxx_system">#737E8B</color>
+    <color name="key_hint_letter_color_lxx_system">#7F8A97</color>
+
+    <color name="key_background_normal_lxx_system">#181C23</color>
+    <color name="key_background_pressed_lxx_system">#263B55</color>
+
+
+    <!-- ================================================= -->
+    <!-- LXX LIGHT THEME                                  -->
+    <!-- ================================================= -->
+
+    <color name="background_lxx_light">#ECEFF1</color>
+    <color name="background_secondary_lxx_light">#DDE2E6</color>
+
+    <color name="key_text_color_lxx_light">#263238</color>
+    <color name="key_functional_text_color_lxx_light">#455A64</color>
+    <color name="key_text_inactive_color_lxx_light">#78909C</color>
+    <color name="key_hint_letter_color_lxx_light">#78909C</color>
+
+    <color name="key_background_normal_lxx_light">#FFFFFF</color>
+    <color name="key_background_pressed_lxx_light">#D5E7F7</color>
+
+
+    <!-- ================================================= -->
+    <!-- LXX DARK THEME                                   -->
+    <!-- ================================================= -->
+
+    <!-- Deep OLED-like keyboard surface -->
+    <color name="background_lxx_dark">#080A0F</color>
+
+    <!-- SmartBar / secondary surface -->
+    <color name="background_secondary_lxx_dark">#10141B</color>
+
+    <!-- Main letters -->
+    <color name="key_text_color_lxx_dark">#F5F7FA</color>
+
+    <!-- Symbols / functional keys -->
+    <color name="key_functional_text_color_lxx_dark">#C5CED8</color>
+
+    <!-- Inactive / secondary text -->
+    <color name="key_text_inactive_color_lxx_dark">#737E8A</color>
+
+    <!-- Small hint letters -->
+    <color name="key_hint_letter_color_lxx_dark">#84909D</color>
+
+    <!-- Normal keycap -->
+    <color name="key_background_normal_lxx_dark">#171B22</color>
+
+    <!-- Pressed key — subtle iQOO blue -->
+    <color name="key_background_pressed_lxx_dark">#263D59</color>
+
+
+    <!-- ================================================= -->
+    <!-- COMMON DIMENSIONS                                -->
+    <!-- ================================================= -->
+
+    <dimen name="button_corner_radius_lxx">8dp</dimen>
+
+</resources>

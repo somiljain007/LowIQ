@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rkr.simplekeyboard.inputmethod.latin.InputView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    style="?attr/inputViewStyle">
+
+    <LinearLayout
+        android:id="@+id/keyboard_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <rkr.simplekeyboard.inputmethod.latin.SmartBarView
+            android:id="@+id/smart_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical" />
+
+        <rkr.simplekeyboard.inputmethod.keyboard.MainKeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layoutDirection="ltr"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</rkr.simplekeyboard.inputmethod.latin.InputView>
