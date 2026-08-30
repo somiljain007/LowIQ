@@ -248,7 +248,40 @@ public class SmartBarView extends LinearLayout {
         icon.setFocusable(true);
 
         /*
-         * Press animation.
+         * =================================================
+         * ICON BACKGROUND
+         * =================================================
+         *
+         * Normally transparent.
+         * On press, a rounded neon background appears
+         * behind the icon.
+         */
+
+        GradientDrawable normalBackground =
+                new GradientDrawable();
+
+        normalBackground.setColor(
+                Color.TRANSPARENT
+        );
+
+        normalBackground.setCornerRadius(
+                dp(10)
+        );
+
+        icon.setBackground(
+                normalBackground
+        );
+
+        /*
+         * =================================================
+         * PRESS / CLICK ANIMATION
+         * =================================================
+         *
+         * The icon slightly shrinks while pressed.
+         * A rounded colored background appears behind it.
+         *
+         * AI -> Purple
+         * Other icons -> Blue
          */
 
         icon.setOnTouchListener(
@@ -261,21 +294,106 @@ public class SmartBarView extends LinearLayout {
                         case MotionEvent.ACTION_DOWN:
 
                             v.animate()
-                                    .scaleX(0.84f)
-                                    .scaleY(0.84f)
-                                    .setDuration(60)
+                                    .cancel();
+
+                            int backgroundColor =
+                                    (v == aiButton)
+                                            ? Color.rgb(
+                                            55,
+                                            30,
+                                            85
+                                    )
+                                            : Color.rgb(
+                                            25,
+                                            65,
+                                            90
+                                    );
+
+                            int strokeColor =
+                                    (v == aiButton)
+                                            ? NEON_PURPLE
+                                            : NEON_BLUE;
+
+                            GradientDrawable pressedBackground =
+                                    new GradientDrawable();
+
+                            pressedBackground.setColor(
+                                    backgroundColor
+                            );
+
+                            pressedBackground.setCornerRadius(
+                                    dp(10)
+                            );
+
+                            pressedBackground.setStroke(
+                                    dp(1),
+                                    strokeColor
+                            );
+
+                            v.setBackground(
+                                    pressedBackground
+                            );
+
+                            v.animate()
+                                    .scaleX(0.94f)
+                                    .scaleY(0.94f)
+                                    .setDuration(70)
                                     .start();
 
                             break;
 
                         case MotionEvent.ACTION_UP:
 
-                        case MotionEvent.ACTION_CANCEL:
+                            v.animate()
+                                    .cancel();
+
+                            GradientDrawable releasedBackground =
+                                    new GradientDrawable();
+
+                            releasedBackground.setColor(
+                                    Color.TRANSPARENT
+                            );
+
+                            releasedBackground.setCornerRadius(
+                                    dp(10)
+                            );
+
+                            v.setBackground(
+                                    releasedBackground
+                            );
 
                             v.animate()
                                     .scaleX(1f)
                                     .scaleY(1f)
                                     .setDuration(110)
+                                    .start();
+
+                            break;
+
+                        case MotionEvent.ACTION_CANCEL:
+
+                            v.animate()
+                                    .cancel();
+
+                            GradientDrawable cancelBackground =
+                                    new GradientDrawable();
+
+                            cancelBackground.setColor(
+                                    Color.TRANSPARENT
+                            );
+
+                            cancelBackground.setCornerRadius(
+                                    dp(10)
+                            );
+
+                            v.setBackground(
+                                    cancelBackground
+                            );
+
+                            v.animate()
+                                    .scaleX(1f)
+                                    .scaleY(1f)
+                                    .setDuration(100)
                                     .start();
 
                             break;
@@ -286,7 +404,11 @@ public class SmartBarView extends LinearLayout {
         );
 
         /*
-         * Button actions.
+         * =================================================
+         * BUTTON ACTIONS
+         * =================================================
+         *
+         * EXISTING FUNCTIONALITY — UNCHANGED
          */
 
         icon.setOnClickListener(v -> {
